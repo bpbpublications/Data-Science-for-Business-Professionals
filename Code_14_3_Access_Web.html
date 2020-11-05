@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Salary Prediction ML Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="width:60%; margin-left:20%;">
+    <h1 class="text-center">Salary Prediction ML Model</h1>
+    <form action="/predict" method="post">
+        <input class="form-control" type="number" name="YearsExperience" step="any" min = "0" placeholder="Number of years of Experience">
+        <input class="btn btn-primary" type="submit" value="Predict Salary">
+    </form>
+    {% if salary %}
+        <p>The Expected Salary  is: {{salary}}</p>
+    {% endif %}
+</body>
+</html>
